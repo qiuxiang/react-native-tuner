@@ -1,0 +1,3 @@
+rootProject.name = 'RNTuner'
+
+include ':app'
