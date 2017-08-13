@@ -3,6 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
+  Platform,
 } from 'react-native'
 
 export default class Note extends PureComponent {
@@ -24,17 +25,25 @@ const style = StyleSheet.create({
   name: {
     fontSize: 128,
     fontWeight: '600',
+    color: '#c62828',
     flexDirection: 'row',
   },
   sharp: {
     fontSize: 32,
+    color: '#c62828',
     position: 'absolute',
     right: 0,
     top: 32,
+    ...Platform.select({
+      ios: {
+        top: 10,
+        fontSize: 48,
+      },
+    })
   },
   octave: {
     fontSize: 32,
-    fontWeight: 'normal',
+    color: '#c62828',
     position: 'absolute',
     right: 0,
     bottom: 0,

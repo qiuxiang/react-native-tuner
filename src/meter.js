@@ -44,19 +44,20 @@ export default class Meter extends PureComponent {
 const style = StyleSheet.create({
   meter: {
     height: 200,
+    marginBottom: 40,
   },
   origin: {
     position: 'absolute',
-    bottom: -5,
+    bottom: 0,
     left: 0,
     right: 0,
     width: 10,
     height: 10,
     borderRadius: 10,
-    backgroundColor: '#757575',
+    backgroundColor: '#37474f',
   },
   pointer: {
-    borderTopWidth: 200,
+    borderTopWidth: 195,
   },
   scale: {
     position: 'absolute',
@@ -65,7 +66,7 @@ const style = StyleSheet.create({
     width: 1,
     height: 400,
     borderTopWidth: 10,
-    borderTopColor: '#757575',
+    borderTopColor: '#37474f',
     marginLeft: 4.5,
   },
   strong: {

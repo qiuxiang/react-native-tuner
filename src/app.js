@@ -36,7 +36,7 @@ export default class App extends Component {
 
   render() {
     return <View style={style.body}>
-      <StatusBar barStyle='dark-content' backgroundColor='rgba(0, 0, 0, 0)' translucent/>
+      <StatusBar backgroundColor='#000' translucent/>
       <Meter cents={this.state.note.cents}/>
       <Note {...this.state.note}/>
       <Text style={style.frequency}>{this.state.note.frequency.toFixed(1)} Hz</Text>
@@ -51,6 +51,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
   frequency: {
-    fontSize: 32,
+    fontSize: 28,
+    color: '#37474f',
   },
 })
