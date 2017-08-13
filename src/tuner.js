@@ -6,7 +6,7 @@ export default class Tuner {
   semitone = 69
   noteStrings = ['C', 'C♯', 'D', 'D♯', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'A♯', 'B']
 
-  constructor(sampleRate = 8000, bufferSize = 1024) {
+  constructor(sampleRate = 22050, bufferSize = 2048) {
     this.sampleRate = sampleRate
     this.bufferSize = bufferSize
     this.pitchFinder = new PitchFinder.YIN({sampleRate: this.sampleRate})
