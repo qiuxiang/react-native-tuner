@@ -3,8 +3,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
-    "android-log": "node node_modules/react-native/local-cli/cli.js log-android",
-    "test": "jest"
+    "android-log": "node node_modules/react-native/local-cli/cli.js log-android"
   },
   "dependencies": {
     "pitchfinder": "^2.0.4",
@@ -13,12 +12,6 @@
     "react-native-recording": "^0.2.0"
   },
   "devDependencies": {
-    "babel-jest": "20.0.3",
-    "babel-preset-react-native": "2.1.0",
-    "jest": "20.0.4",
-    "react-test-renderer": "16.0.0-alpha.12"
-  },
-  "jest": {
-    "preset": "react-native"
+    "babel-preset-react-native": "2.1.0"
   }
 }
