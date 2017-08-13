@@ -9,7 +9,7 @@ export default class Meter extends PureComponent {
   componentWillReceiveProps(props) {
     Animated.timing(this.state.cents, {
       toValue: props.cents,
-      duration: 200,
+      duration: 500,
     }).start()
   }
 
@@ -53,7 +53,7 @@ const style = StyleSheet.create({
     width: 10,
     height: 10,
     borderRadius: 10,
-    backgroundColor: '#000',
+    backgroundColor: '#757575',
   },
   pointer: {
     borderTopWidth: 200,
@@ -65,7 +65,7 @@ const style = StyleSheet.create({
     width: 1,
     height: 400,
     borderTopWidth: 10,
-    borderTopColor: '#000',
+    borderTopColor: '#757575',
     marginLeft: 4.5,
   },
   strong: {
