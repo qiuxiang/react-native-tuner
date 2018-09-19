@@ -2,16 +2,21 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "reload": "adb reverse tcp:8081 tcp:8081 && adb shell input text rr",
+    "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
-    "android-log": "node node_modules/react-native/local-cli/cli.js log-android"
+    "release-android": "node node_modules/react-native/local-cli/cli.js run-android --variant=release"
   },
   "dependencies": {
-    "pitchfinder": "^2.0.4",
-    "react": "16.0.0-alpha.12",
-    "react-native": "0.47.1",
-    "react-native-recording": "^0.2.0"
+    "pitchfinder": "^2.0.9",
+    "react": "16.5.0",
+    "react-native": "0.57.0",
+    "react-native-recording": "^0.4.1"
   },
   "devDependencies": {
-    "babel-preset-react-native": "2.1.0"
-  }
+    "metro-react-native-babel-preset": "0.45.3"
+  },
+  "presets": [
+    "module:metro-react-native-babel-preset"
+  ]
 }
