@@ -1,8 +1,13 @@
 # react-native-tuner
 A tuner app written in react native, support ios and android.
 
+## Download
+[RNTuner.apk](https://github.com/qiuxiang/react-native-tuner/releases/download/v1.1.0/react-native-tuner.apk)
+
+## Screenshots
+
 ### Android:
-<img src="https://user-images.githubusercontent.com/1709072/45735912-11e31100-bc1c-11e8-9893-197b793df581.png" width=300>
+<img src="https://user-images.githubusercontent.com/1709072/45736954-12c97200-bc1f-11e8-87b9-e8ae3f13468e.jpg" width=300>
 
 ### iOS
-<img src="https://user-images.githubusercontent.com/1709072/45735858-ea8c4400-bc1b-11e8-9a6e-3dc67b23d3b6.png" width=300>
+<img src="https://user-images.githubusercontent.com/1709072/45736960-178e2600-bc1f-11e8-9eca-7cdd5dc5ac07.jpg" width=300>
