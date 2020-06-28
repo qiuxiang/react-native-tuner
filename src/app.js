@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { View, Text, StatusBar, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  StatusBar,
+  StyleSheet,
+  PermissionsAndroid,
+} from "react-native";
 import Tuner from "./tuner";
 import Note from "./note";
 import Meter from "./meter";
@@ -9,18 +15,24 @@ export default class App extends Component {
     note: {
       name: "A",
       octave: 4,
-      frequency: 440
-    }
+      frequency: 440,
+    },
   };
 
   _update(note) {
     this.setState({ note });
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    if (Platform.OS === "android") {
+      await PermissionsAndroid.requestMultiple([
+        PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
+      ]);
+    }
+
     const tuner = new Tuner();
     tuner.start();
-    tuner.onNoteDetected = note => {
+    tuner.onNoteDetected = (note) => {
       if (this._lastNoteName === note.name) {
         this._update(note);
       } else {
@@ -47,10 +59,10 @@ const style = StyleSheet.create({
   body: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   frequency: {
     fontSize: 28,
-    color: "#37474f"
-  }
+    color: "#37474f",
+  },
 });

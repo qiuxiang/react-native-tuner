@@ -16,7 +16,7 @@ export default class Tuner {
     "G♯",
     "A",
     "A♯",
-    "B"
+    "B",
   ];
 
   constructor(sampleRate = 22050, bufferSize = 2048) {
@@ -28,10 +28,10 @@ export default class Tuner {
   start() {
     Recording.init({
       sampleRate: this.sampleRate,
-      bufferSize: this.bufferSize
+      bufferSize: this.bufferSize,
     });
     Recording.start();
-    Recording.addRecordingEventListener(data => {
+    Recording.addRecordingEventListener((data) => {
       const frequency = this.pitchFinder(data);
       if (frequency && this.onNoteDetected) {
         const note = this.getNote(frequency);
@@ -40,7 +40,7 @@ export default class Tuner {
           value: note,
           cents: this.getCents(frequency, note),
           octave: parseInt(note / 12) - 1,
-          frequency: frequency
+          frequency: frequency,
         });
       }
     });
