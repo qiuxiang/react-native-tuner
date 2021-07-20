@@ -10,7 +10,7 @@
   "dependencies": {
     "pitchfinder": "^2.3.1",
     "react": "16.11.0",
-    "react-native": "0.62.2",
+    "react-native": "0.62.3",
     "react-native-recording": "^0.5.1"
   }
 }
