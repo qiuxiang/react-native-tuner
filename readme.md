@@ -1,5 +1,5 @@
 # react-native-tuner
-A tuner app written in react native, support ios and android.
+A tuner app written in react-native, support ios and android.
 
 ## Download
 [app-release.apk](https://github.com/qiuxiang/react-native-tuner/releases/download/v1.2.0/app-release.apk)
